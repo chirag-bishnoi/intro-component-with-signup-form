@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+         local('poppins'),
+         url('assets/fonts/Poppins-Regular.woff2') format('woff2'),
+         url('assets/fonts/Poppins-Regular.woff')  format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+         local('poppins'),
+         url('assets/fonts/Poppins-Medium.woff2') format('woff2'),
+         url('assets/fonts/Poppins-Medium.woff')  format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+         local('poppins'),
+         url('assets/fonts/Poppins-SemiBold.woff2') format('woff2'),
+         url('assets/fonts/Poppins-SemiBold.woff')  format('woff');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+         local('poppins'),
+         url('assets/fonts/Poppins-Bold.woff2') format('woff2'),
+         url('assets/fonts/Poppins-Bold.woff')  format('woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'),
+         local('poppins'),
+         url('assets/fonts/Poppins-Italic.woff2') format('woff2'),
+         url('assets/fonts/Poppins-Italic.woff')  format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+:root {
+    --clr-red:hsl(0, 100%, 74%);
+    --clr-green:hsl(154, 59%, 51%);
+    --clr-blue-100:hsl(248, 32%, 49%);
+    --clr-blue-200:hsl(249, 10%, 26%);
+    --clr-blue-300:hsl(246, 25%, 77%);
+
+    --clr-green-hsl:154, 59%, 51%;
+   
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    font-size: 1rem;
+    background-image: url(assets/images/bg-intro-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: var(--clr-red);
+    color: whitesmoke;
+}
+
+@media(max-width:500px){
+    body{
+    background-image: url(assets/images/bg-intro-mobile.png);
+    }
+}
+
+main {
+    margin-inline: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 2rem;
+    padding-inline: 2rem;
+}
+
+section {
+    flex: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+/*SECTION RIGHT
+=======================*/
+
+h3 {
+    background-color: var(--clr-blue-100);
+    text-align: center;
+    padding-block: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    font-size: inherit;
+}
+
+
+h3 span {
+    font-weight: 400;
+}
+
+article {
+    background-color: #fff;
+    border-radius: 10px;
+    padding-block: 2.5rem;
+    padding-inline: 3rem;
+}
+
+article,h3{
+    box-shadow: 1px 8px 1px hsla(0, 0%, 0%, 0.163);
+}
+
+article p {
+    color: var(--clr-blue-300);
+    font-size: .75rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+article p a {
+    color: var(--clr-red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+article p a:hover{
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+    padding-block: 1rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.1rem;
+    outline: none;
+    border: 1px solid var(--clr-blue-300);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+input:focus{
+    border: 2px solid;
+}
+
+.submit{
+    background-color: var(--clr-green);
+    cursor: pointer;
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.submit:hover {
+    background-color: hsla(var(--clr-green-hsl), .7);
+}
+
+label{
+    position: relative;
+}
+
+/*JAVASCRIPT PART*/
+
+.error {
+    display: block;
+    position: relative;
+    top: -10px;
+    width: 100%;
+    color: var(--clr-red);
+    text-align: right;
+    font-style: italic;
+    display: none;
+}
+
+.error-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+}
+
+.show .error, .show .error-icon{
+    display: block;
+}
+
+
+/*MEDIA QUERRY*/
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h1,p {
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+        margin-block: 15%;
+    }
+
+    article {
+        padding: 2rem;
+    }
+}

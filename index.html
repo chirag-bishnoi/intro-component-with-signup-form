@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <section class="left">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </section>
+        
+    <section class="right">
+      <h3>Try it free 7 days <span>then $20/mo. thereafter</span></h3>
+      <article>
+        <form action="" method="post" target="_blank" id="form">
+          <label for="firs-name">
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" aria-placeholder="First Name">
+            <img src="assets/images/icon-error.svg" alt="" class="error-icon">
+            <span id="error-1" class="error"></span>
+          </label>
+  
+          <label for="last-name">
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" aria-placeholder="Last Name">
+            <img src="assets/images/icon-error.svg" alt="" class="error-icon">
+            <span id="error-2" class="error"></span>
+          </label>
+  
+          <label for="email">
+            <input type="text" id="email" name="email-address" placeholder="Email Address" aria-placeholder="Email Address" class="email">
+            <img src="assets/images/icon-error.svg" alt="" class="error-icon">
+            <span id="error-3" class="error"></span>
+          </label>
+  
+          <label for="password">
+            <input type="password" id="password" name="password" placeholder="Password" aria-placeholder="Password">
+            <img src="assets/images/icon-error.svg" alt="" class="error-icon">
+            <span id="error-4" class="error"></span>
+          </label>
+  
+          <input class="submit" type="submit" value="Claim your free trial" id="submit">
+        </form>
+        <p>By clicking the button, you are agreeing to our <a href="">Terms and Services</a></p>
+      </article>
+
+    </section>
+    
+  </main>
+
+
+  <script src="main.js"></script>
+</body>
+</html> 
